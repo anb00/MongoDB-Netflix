@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: mflix.api.daos.TextAndSubfieldTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 4, Skipped: 0, Time elapsed: 0.193 s <<< FAILURE! - in mflix.api.daos.TextAndSubfieldTest
+testGenreSearch(mflix.api.daos.TextAndSubfieldTest)  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: getMoviesByGenre should be returning documents
+	at mflix.api.daos.TextAndSubfieldTest.testGenreSearch(TextAndSubfieldTest.java:157)
+
+testSearchMultipleCast(mflix.api.daos.TextAndSubfieldTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalArgumentException: filter can not be null
+	at mflix.api.daos.TextAndSubfieldTest.testSearchMultipleCast(TextAndSubfieldTest.java:110)
+
+testMultipleGenreSearch(mflix.api.daos.TextAndSubfieldTest)  Time elapsed: 0.048 s  <<< FAILURE!
+java.lang.AssertionError: getMoviesByGenre should be returning documents
+	at mflix.api.daos.TextAndSubfieldTest.testMultipleGenreSearch(TextAndSubfieldTest.java:141)
+
+testSearchByCast(mflix.api.daos.TextAndSubfieldTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalArgumentException: filter can not be null
+	at mflix.api.daos.TextAndSubfieldTest.testSearchByCast(TextAndSubfieldTest.java:83)
+
+testTextSearch(mflix.api.daos.TextAndSubfieldTest)  Time elapsed: 0.049 s  <<< ERROR!
+com.mongodb.MongoQueryException: Query failed with error code 27 and error message 'text index required for $text query (no such collection 'mflix.movies')' on server mflix-shard-00-00-jdnwk.mongodb.net:27017
+	at mflix.api.daos.TextAndSubfieldTest.testTextSearch(TextAndSubfieldTest.java:47)
+
+testTextSearchCount(mflix.api.daos.TextAndSubfieldTest)  Time elapsed: 0.048 s  <<< ERROR!
+com.mongodb.MongoCommandException: Command failed with error 27 (IndexNotFound): 'text index required for $text query (no such collection 'mflix.movies')' on server mflix-shard-00-00-jdnwk.mongodb.net:27017. The full response is { "operationTime" : { "$timestamp" : { "t" : 1550013693, "i" : 3 } }, "ok" : 0.0, "errmsg" : "text index required for $text query (no such collection 'mflix.movies')", "code" : 27, "codeName" : "IndexNotFound", "$clusterTime" : { "clusterTime" : { "$timestamp" : { "t" : 1550013693, "i" : 3 } }, "signature" : { "hash" : { "$binary" : "q/tpiGnGj7LUtcrxe40Sk5jrbRk=", "$type" : "00" }, "keyId" : { "$numberLong" : "6656391339552276481" } } } }
+	at mflix.api.daos.TextAndSubfieldTest.testTextSearchCount(TextAndSubfieldTest.java:76)
+

@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: mflix.api.daos.HandlingErrorsTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.207 s <<< FAILURE! - in mflix.api.daos.HandlingErrorsTest
+testNoUserDups(mflix.api.daos.HandlingErrorsTest)  Time elapsed: 0.114 s  <<< FAILURE!
+java.lang.AssertionError: Expected exception: mflix.api.daos.IncorrectDaoOperation
+
+testAccessExistingDocument(mflix.api.daos.HandlingErrorsTest)  Time elapsed: 0.048 s  <<< ERROR!
+java.lang.NullPointerException
+	at mflix.api.daos.HandlingErrorsTest.testAccessExistingDocument(HandlingErrorsTest.java:45)
+
